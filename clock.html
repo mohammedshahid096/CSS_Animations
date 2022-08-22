@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+    <style>
+        body{
+  margin:0;
+  padding:0;
+  background-color:#262626;
+}
+.clock{
+  position:absolute;
+  top:30%;
+  left:40%;
+  width:200px;
+  height:200px;
+  border:8px solid red;
+  background-image:url("https://w7.pngwing.com/pngs/37/129/png-transparent-analog-clock-clock-seiko-watch-case-astron-jam-angle-white-furniture-thumbnail.png");
+  background-size:cover;
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:hard-light;
+  border-radius:50%;
+  box-shadow:5px 6px 15px grey inset, -5px -6px 15px grey inset;;
+}
+.clock:before{
+  content:"";
+  position:absolute;
+  background-color:black;
+  top:50%;
+  left:50%;
+  width:6rem;
+  height: 8px;
+  border-radius:3px;
+  transform-origin:left;
+  animation-name:animihand;
+  animation-duration:5s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+span{
+  width:20px;
+  height:20px;
+  position:absolute;
+  background-color:red;
+  top:48%;
+  left:45%;
+  border-radius:50%;
+  z-index:1;
+}
+.clock:after{
+  content:"";
+  position:absolute;
+  background-color:black;
+  top:50%;
+  left:52%;
+  width:4.5rem;
+  height: 8px;
+  border-radius:3px;
+  transform-origin:left;
+  animation-name:animihand;
+  animation-duration:32s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+@keyframes animihand{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+    </style>
+</head>
+<body>
+	<div class="clock">
+    <span>
+    </span>
+  </div>
+</body>
+</html>
