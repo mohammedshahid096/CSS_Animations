@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wavy circle loader</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(136, 78, 150);
+        }
+        .container{
+            width: 30%;
+            height: 30rem;
+            margin: 0 auto;
+            position: relative;
+            top:12rem;
+            box-sizing: border-box;
+        }
+        .loader{
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            perspective: 500px;
+            transform: rotateX(62deg);
+            position: relative;
+            
+        }
+        .loader span{
+        
+         display: block;
+         border: 5px solid white;
+         position: absolute;
+         border-radius: 50%;
+         box-sizing: border-box;
+         animation-name: loaderwave;
+         animation-duration: 3s;
+         animation-timing-function: ease-in-out;
+         animation-iteration-count: infinite;
+         text-align: center;
+         color: white;
+         box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.301), -2px -2px 12px #ccc;
+         
+        }
+        @keyframes loaderwave {
+            0%,100%{
+                transform: translateZ(-100px);
+                font-size: x-small;
+            }
+            50%{
+                transform: translateZ(100px);
+                font-size: xx-large;
+            }
+        }
+        .loader span:nth-child(1){
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            animation-delay: 1.4s;
+        }
+        .loader span:nth-child(2){
+            top: 10px;
+            bottom: 10px;
+            right: 10px;
+            left: 10px;
+            animation-delay: 1.3s;
+        }
+        .loader span:nth-child(3){
+            top: 20px;
+            bottom: 20px;
+            right: 20px;
+            left: 20px;
+            animation-delay: 1.2s;
+        }
+        .loader span:nth-child(4){
+            top: 30px;
+            bottom: 30px;
+            right: 30px;
+            left: 30px;
+            animation-delay: 1.1s;
+        }
+        .loader span:nth-child(5){
+            top: 40px;
+            bottom: 40px;
+            right: 40px;
+            left: 40px;
+            animation-delay: 1s;
+        }
+        .loader span:nth-child(6){
+            top: 50px;
+            bottom: 50px;
+            right: 50px;
+            left: 50px;
+            animation-delay: 0.9s;
+        }
+        .loader span:nth-child(7){
+            top: 60px;
+            bottom: 60px;
+            right: 60px;
+            left: 60px;
+            animation-delay: 0.8s;
+        }
+        .loader span:nth-child(8){
+            top: 70px;
+            bottom: 70px;
+            right: 70px;
+            left: 70px;
+            animation-delay: 0.7s;
+        }
+        .loader span:nth-child(9){
+            top: 80px;
+            bottom: 80px;
+            right: 80px;
+            left: 80px;
+            animation-delay: 0.6s;
+        }
+        .loader span:nth-child(10){
+            top: 90px;
+            bottom: 90px;
+            right: 90px;
+            left: 90px;
+            animation-delay: 0.5s;
+        }
+        .loader span:nth-child(11){
+            top: 100px;
+            bottom: 100px;
+            right: 100px;
+            left: 100px;
+            animation-delay: 0.4s;
+        }
+        .loader span:nth-child(12){
+            top: 110px;
+            bottom: 110px;
+            right: 110px;
+            left: 110px;
+            animation-delay: 0.3s;
+        }
+        .loader span:nth-child(13){
+            top: 120px;
+            bottom: 120px;
+            right: 120px;
+            left: 120px;
+            animation-delay: 0.2s;
+        }
+        .loader span:nth-child(14){
+            top: 130px;
+            bottom: 130px;
+            right: 130px;
+            left: 130px;
+            animation-delay: 0.1s;
+        }
+        .loader span:nth-child(15){
+            top: 140px;
+            bottom: 140px;
+            right: 140px;
+            left: 140px;
+            animation-delay: 0s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="loader">
+            <span>A</span>
+            <span>B</span>
+            <span>C</span>
+            <span>D</span>
+            <span>E</span>
+            <span>F</span>
+            <span>G</span>
+            <span>H</span>
+            <span>I</span>
+            <span>J</span>
+            <span>K</span>
+            <span>L</span>
+            <span>M</span>
+            <span>O</span>
+            <span>P</span>
+
+        </div>
+    </div>
+    <script>
+        let x = document.getElementsByTagName("span");
+        console.log(x);
+    </script>
+    
+</body>
+
+</html>
