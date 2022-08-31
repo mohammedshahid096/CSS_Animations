@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Tea Cup</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgba(64, 116, 116, 0.525);
+            display: flex;
+            /* justify-content: center; */
+        }
+        .container{
+            position: relative;
+            top:23rem;
+            /* background-color: black; */
+            min-height: 500px;
+            min-width: 250px;
+            margin: 0 auto;
+        }
+        .cup{
+            position: absolute;
+            width: 280px;
+            height: 300px;
+            background-image:linear-gradient(to right,#f9f9f9,#d9d9d9);
+            border-bottom-left-radius: 45%;
+            border-bottom-right-radius: 45%;
+            z-index: 1;
+        }
+        .top{
+            position: absolute;
+            top: -30px;
+            width: 100%;
+            height: 60px;
+            background-image:linear-gradient(to right,#f9f9f9,#d9d9d9);
+            border-radius: 50%;
+        }
+        .circle{
+            background-image: linear-gradient(to left,#f9f9f9,#d9d9d9);
+            width:calc(100% - 20px);
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 7px;
+            left: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .tea{
+            position: absolute;
+            top:13px;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(#c57e65,#e28462);
+            border-radius: 50%;
+        }
+        .handle{
+            position: absolute;
+            top: 3rem;
+            left: 15rem;
+            width: 160px;
+            height: 162px;
+            border: 27px solid #d9d9d9;
+            border-left: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-radius: 50%;
+            transform: rotate(43deg);
+        }
+        .plate{
+            width: 35rem;
+            height: 175px;
+            background-image: linear-gradient(to right,#f9f9f9,#d9d9d9);
+            position: relative;
+            transform: translate(-74px, 152px);
+            border-radius: 90%;
+            box-shadow: 0 35px 35px rgb(0, 0, 0,0.2);
+        }
+        .plate::before{
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background-image: linear-gradient(to left,#f9f9f9,#e7e7e7);
+            border-radius: 50%;
+        }
+        .plate::after{
+            content: "";
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            right: 30px;
+            bottom: 30px;
+            background-image: radial-gradient(rgba(0, 0, 0, 0.2) 25%,transparent,transparent);
+            border-radius: 50%;
+        }
+        .vapour{
+            position: relative;
+            left:1.7rem;
+            display: flex;
+            z-index: 1;
+        }
+        .vapour span{
+            position: relative;
+            display: block;
+            bottom: 50px;
+            min-width: 8px;
+            height: 120px;
+            background-color: #fff;
+            margin: 0 2px 50px;
+            border-radius: 50%;
+            animation-name: animationvapour;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            filter: blur(8px);
+            animation-delay: calc(var(--i)* 0.5s);
+        }
+        @keyframes animationvapour {
+            0%{
+                transform:translateY(0) scaleX(1);
+                opacity: 0;
+            }
+            15%{
+                opacity:1;
+            }
+            50%{
+                transform:translateY(-90px) scaleX(5);
+            }
+            95%{
+                opacity:0.2;
+            }
+            100%{
+                opacity: 0;
+                transform:translateY(-180px) scaleX(10);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cup">
+            <div class="top">
+                <div class="vapour">
+                    <span style="--i:1;"></span>
+                    <span style="--i:5;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:3;"></span>
+                    <span style="--i:7;"></span>
+                    <span style="--i:6;"></span>
+                    <span style="--i:8;"></span>
+                    <span style="--i:16;"></span>
+                    <span style="--i:10;"></span>
+                    <span style="--i:4;"></span>
+                    <span style="--i:9;"></span>
+                    <span style="--i:11;"></span>
+                    <span style="--i:14;"></span>
+                    <span style="--i:15;"></span>
+                    <span style="--i:17;"></span>
+                    <span style="--i:20;"></span>
+                    <span style="--i:12;"></span>
+                    <span style="--i:13;"></span>
+                    <span style="--i:19;"></span>
+                    <span style="--i:18;"></span>
+                    
+                </div>
+                <div class="circle">
+                    <div class="tea">
+                        <!-- tea -->
+                    </div>
+                </div>
+            </div>
+            <div class="handle">
+                <!-- handle -->
+            </div>
+        </div>
+        <div class="plate">
+            
+        </div>
+    </div>
+</body>
+</html>
